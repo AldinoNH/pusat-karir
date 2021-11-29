@@ -11,22 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/carousel/">
 
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-
-
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+    <meta name="theme-color" content="#563d7c">
 
 
     <style>
@@ -62,9 +48,7 @@
       }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+  
   </head>
   <body>
     
@@ -139,149 +123,225 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-<div class="col-8">
-  
-  
-</div>
-<div class="col-12">
+
   <div class="row">
-    
     <div class="col-9">
-        <div class="card bg-light" >
-          <div class="card-header">Daftar Lowongan kerja
-            <div class="col-4 float-right">
-              <form class="form-inline my-2 my-lg-0" action=" " method="GET">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" value="cari">Search</button>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <div class="card" >
-                    <div class="card-header">Kategori Posisi</div>
-                      <div class="card-body">
-                      <ul class="list-group list-group-flush ">
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Semua Kategori</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Administrasi</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Agrikultur/Kehutanan/Perikanan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Akuntansi</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Audit</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Bioteknologi</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Catering</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Desain</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Keamanan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Kesehatan dan Kecantikan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Kimia</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Konstruksi dan Bangunan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Layanan Bisnis</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Media dan Periklanan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Migas dan Pertambangan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Otomotif</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Pendidikan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Penerbangan</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Perbankan/Finansial</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Properti</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">R&D dan Lab</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Teknologi Informatika</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Telekomunikasi</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Transportasi</a></li>
-                        <li class="list-group-item"><a href="#" class="text-secondary stretched-link">Umum</a></li>
-                      </ul>
-                      </div>
-                  <div class="card bg-light">
-                    <div class="card-header">Bidang Industri</div>
-                      <div class="card-body">
-                      <div class="list-group scrollable">
-                          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                            The current link item
-                          </a>
-                          <a href="#" class="list-group-item list-group-item-action">Semua Industri</a>
-                          <a href="#" class="list-group-item list-group-item-action">Akuntan/Auditor</a>
-                          <a href="#" class="list-group-item list-group-item-action">Asuransi</a>
-                          <a href="#" class="list-group-item list-group-item-action">Ekspedisi / Agen Cargo</a>
-                          <a href="#" class="list-group-item list-group-item-action">Elektronika/Semikonduktor</a>
-                          <a href="#" class="list-group-item list-group-item-action">Farmasi</a>
-                          <a href="#" class="list-group-item list-group-item-action">Furnitur</a>
-                          <a href="#" class="list-group-item list-group-item-action">Garmen/Tekstil</a>
-                          <a href="#" class="list-group-item list-group-item-action">Hiburan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Hotel</a>
-                          <a href="#" class="list-group-item list-group-item-action">Hukum</a>
-                          <a href="#" class="list-group-item list-group-item-action">Internet</a>
-                          <a href="#" class="list-group-item list-group-item-action">Kehutanan/Perkayuan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Keuangan/Bank</a>
-                          <a href="#" class="list-group-item list-group-item-action">Kimia</a>
-                          <a href="#" class="list-group-item list-group-item-action">Komputer/TI</a>
-                          <a href="#" class="list-group-item list-group-item-action">Konstruksi</a>
-                          <a href="#" class="list-group-item list-group-item-action">Konsultan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Kosmetik</a>
-                          <a href="#" class="list-group-item list-group-item-action">Logam</a>
-                          <a href="#" class="list-group-item list-group-item-action">Logistik/Transportasi</a>
-                          <a href="#" class="list-group-item list-group-item-action">Mainan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Manufaktur</a>
-                          <a href="#" class="list-group-item list-group-item-action">Media</a>
-                          <a href="#" class="list-group-item list-group-item-action">Mekanik/Listrik</a>
-                          <a href="#" class="list-group-item list-group-item-action">Otomotif</a>
-                          <a href="#" class="list-group-item list-group-item-action">Minyak dan Gas</a>
-                          <a href="#" class="list-group-item list-group-item-action">Makanan/Minuman</a>
-                          <a href="#" class="list-group-item list-group-item-action">Penerbangan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Pengolahan sumber daya alam lainnya</a>
-                          <a href="#" class="list-group-item list-group-item-action">Percetakan dan Kemasan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Kesehatan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Perikanan</a>
-                          <a href="#" class="list-group-item list-group-item-action">Ritel</a>
-                          <a href="#" class="list-group-item list-group-item-action">Telekomunikasi</a>
-                          <a href="#" class="list-group-item list-group-item-action">Travel</a>
-                          <a href="#" class="list-group-item list-group-item-action">Agribisnis</a>
-                          <a href="#" class="list-group-item list-group-item-action">Lain-lain</a>
-                        </div>
-                    </div>
-                  </div>
+      <div class="card bg-light">
+        <div class="card-header">Daftar Lowongan kerja</div>
+        <div class="card-body p-0">
+          <div class="d-flex">
+            <div class="card-header">
+
+              {{-- Kategori Posisi --}}
+              <div>
+                <h6> Kategori Posisi </h6>
+
+                <div id="list-kategori-posisi" class="list-group list-group-flush my-4">
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="all">Semua Kategori</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="administrasi">Administrasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kehutanan">Agrikultur / Kehutanan / Perikanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="akuntansi">Akuntansi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="audit">Audit</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="bioteknologi">Bioteknologi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="catring">Catering</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="desain">Desain</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="keamanan">Keamanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kesehatan">Kesehatan dan Kecantikan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kimia">Kimia</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="konstruksi">Konstruksi dan Bangunan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="layanan bisnis">Layanan Bisnis</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="media dan periklanan">Media dan Periklanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="migas dan pertambangan">Migas dan Pertambangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="otomotif">Otomotif</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="pendidikan">Pendidikan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="penerbangan">Penerbangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="perbankan">Perbankan / Finansial</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="properti">Properti</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="r&d dan lab">R&D dan Lab</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="teknologi informatika">Teknologi Informatika</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="telekomunikasi">Telekomunikasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="teleportasi">Transportasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="umum">Umum</button>
                 </div>
               </div>
-              <div class="col-9">
-              @include('lowongankerja')
-              <nav class="float-right" aria-label="...">
-              {{ $lowongan->links() }}
-              </nav>
+              
+              {{-- Kategosri Industri --}}
+              <div>
+                <h6>Kategori Industri</h6>
+                <div id="list-kategori-industri" class="list-group scrollable my-4">
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Semua Industri</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Akuntan/Auditor</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Asuransi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Ekspedisi / Agen Cargo</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Elektronika/Semikonduktor</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Farmasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Furnitur</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Garmen/Tekstil</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hiburan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hotel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hukum</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Internet</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kehutanan/Perkayuan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Keuangan/Bank</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kimia</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Komputer/TI</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Konstruksi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Konsultan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kosmetik</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Logam</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Logistik/Transportasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Mainan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Manufaktur</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Media</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Mekanik/Listrik</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Otomotif</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Minyak dan Gas</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Makanan/Minuman</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Penerbangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Pengolahan sumber daya alam lainnya</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Percetakan dan Kemasan</a>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kesehatan<buttona>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Perikanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Ritel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Telekomunikasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Travel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Agribisnis</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Lain-lain</button>
+                </div>
+              </div>
+
             </div>
+
+            <div class="p-1">
+
+              <div class="row">
+                <div class="col-12 py-4">
+                  <form class="form-inline my-2 my-lg-0" method="GET">
+                    <input class="form-control col-12 mr-sm-2" id="search-lowongan" autofocus type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                </div>
+              </div>
+
+              <div id="searchresult">
+
+              </div>
+
+              <div id="firstquery">
+                @include('lowongankerja')
+                <nav class="float-right" aria-label="...">
+                  {{ $lowongan->links() }}
+                </nav>
+              </div>
+
+            </div>
+
           </div>
-        </div>
+        </div> 
+      </div> 
     </div>
+
     <div class="col-3">
       <div class="card bg-light" >
-          <div class="card-header">Informasi</div>
-            <div class="card-body">
+        <div class="card-header">Informasi</div>
+          <div class="card-body">
             @include('carouselberita')
           </div>
         </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="jumbotron" >
+    <h1 class="display-4 text-center">Find Your Best Employees!</h1>
+    <p class="lead text-center">Apakah anda punya lowongan pekerjaan ?</p>
+    <hr class="my-4 text-center">
+    <p class="text-center">Submit disini.</p>
+    <div class="mx-auto" style="width: 100px;">
+    <a class=" btn btn-primary btn-lg" href="/inputlowongankerja" role="button">Submit</a>
     </div>
   </div>
-</div>
-<div class="jumbotron" >
-  <h1 class="display-4 text-center">Find Your Best Employees!</h1>
-  <p class="lead text-center">Apakah anda punya lowongan pekerjaan ?</p>
-  <hr class="my-4 text-center">
-  <p class="text-center">Submit disini.</p>
-  <div class="mx-auto" style="width: 100px;">
-  <a class=" btn btn-primary btn-lg" href="/inputlowongankerja" role="button">Submit</a>
-  </div>
-</div>
-<div class="footer footer-expand-md footer-light bottom bg-light">
-  <div class="container">
-  <div class="row">
-    <div class="col-12">
-      @include('footer')
+  <div class="footer footer-expand-md footer-light bottom bg-light">
+    <div class="container">
+    <div class="row">
+      <div class="col-12">
+        @include('footer')
+      </div>
+    </div>
     </div>
   </div>
-  </div>
-</div>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
       
+
+        $('#list-kategori-posisi button').on('click', function (event) {
+          
+          var list = $(event.target)
+          const kategori = list.data('kategori')
+
+        })
+
+        $('#list-kategori-industri button').on('click', function (event) {
+          
+          var list = $(event.target)
+          const kategori = list.data('kategori')
+
+        })
+
+        $('#search-lowongan').keyup((ev) => {
+          
+
+
+          const value = ev.target.value
+
+          if( value === '' ) {
+            $('#firstquery').removeAttr('class')
+            $('#searchresult').html('')
+          }else{
+
+            $('#firstquery').attr('class' , 'd-none')
+
+            $('#searchresult').html(`<div class="col-12" style="text-align: center">Loading ...</div>`)
+
+            $.get(`{{ route('search.lowongan') }}?search=${value}` , (res) => {
+  
+              let reshtml = `<div class="row">`
+
+              if( res.length !== 0 ) {
+
+                res.map(val => {
+                  reshtml += 
+                  `<div class="col-md-4">
+                      <img class="content img-thumbnail" src="{{ url('foto/${val.foto}') }}" width="100px">
+                      <h2>${val.judul_lowongan}</h2>
+                      <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
+                      <p><a class="btn btn-secondary" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
+                    </div>`
+                })
+
+              }else{
+
+                reshtml += `<div class="col-12 text-center">Tidak ada hasil</div>`
+
+              }
+
+
+              reshtml += `</div>`
+
+              $('#searchresult').html(reshtml)
+  
+            })
+          }
+
+
+        })
+
+      });
+    </script>
+
   </body>
 </html>

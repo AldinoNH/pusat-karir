@@ -77,45 +77,6 @@
 
     <div class="accrodion" id="accrodionArsip">
 
-      {{-- Approve Lowongan --}}
-
-      <div class="accordion-item">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Lowongan Approval
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accrodionArsip">
-            <div class="card-body">
-              
-               <!-- START THE FEATURETTES -->
-                  @foreach( $lowongan as $data )
-                  <hr class="featurette-divider">
-
-                  <div class="d-flex justify-content-between featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
-                    </div>
-                    
-                    <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
-                    </div>
-                  </div>
-                  @endforeach
-
-                <!-- /END THE FEATURETTES -->
-
-            </div>
-          </div>
-        </div>
-      </div>
-
       {{-- Arsip Lowongan --}}
 
       <div class="accordion-item">
@@ -123,7 +84,7 @@
           <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lowongan Terarsip
+                Event Terarsip
               </button>
             </h2>
           </div>
@@ -137,15 +98,15 @@
 
                   <div class="d-flex justify-content-between featurette">
                     <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->tgl_akhir)->locale('id')->isoFormat('LL') }}</span>
+                      <h2 class="featurette-heading">{{ $data->nama_event }} <span class="text-muted"></span></h2>
+                      <p class="lead">{{ $data->deskripsi }}</p>
+                      <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->waktu)->locale('id')->isoFormat('LL') }}</span>
                       <br />
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
+                      <a href="admin/detail/{{ $data->id_event }}" class="btn btn-secondary">View details</a>
                     </div>
                     
                     <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
+                      <img src="{{ url('foto/'.$data->foto_event) }}" style="max-height: 150px" class="img-thumbnail">
                     </div>
                   </div>
                   @endforeach

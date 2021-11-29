@@ -1,31 +1,10 @@
-<!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-<!-- Three columns of text below the carousel -->
 <div class="row">
-  <div class="col-lg-4">
-   
-
-@foreach( $lowongan as $data )
-<img class="content" src="{{ url('foto/'.$data->foto) }}" width="100px">
-    <h2>{{ $data->judul_lowongan }}</h2>
-    <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
-    <p><a class="btn btn-secondary" href="admin/detail/{{ $data->id_lowongan }}">View details &raquo;</a></p>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-   
-@endforeach
-   
-
-    <!-- <h2>Heading</h2>
-    <p>And lastly this, the third column of representative placeholder content.</p>
-    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
-  </div><!-- /.col-lg-4 -->
-
-</div><!-- /.row -->
-
-</div><!-- /.container -->
-  
+  @foreach( $lowongan as $data )
+    <div class="col-md-4">
+      <img class="content img-thumbnail" src="{{ url('foto/'.$data->foto) }}" width="100px">
+      <h2>{{ $data->judul_lowongan }}</h2>
+      <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
+      <p><a class="btn btn-secondary" href="admin/detail/{{ $data->id_lowongan }}">View details &raquo;</a></p>
+    </div>
+  @endforeach
+</div>
