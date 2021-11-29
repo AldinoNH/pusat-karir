@@ -101,6 +101,7 @@
               </form>
             </div>
           </div>
+          <div class="card-header">Daftar Lowongan kerja</div>
           <div class="row">
             <div class="col-3">
               <div class="card" >

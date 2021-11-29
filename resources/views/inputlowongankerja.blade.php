@@ -220,6 +220,8 @@
                         </div>
 
                         <div class="form-group">
+=======
+>>>>>>> 7494b0e502472144d43db09a2db5dc34778cf81f
                             <label>Tanggal Awal</label>
                             <input type="date" name="tgl_awal" class="form-control">
                             <div class="text-danger">

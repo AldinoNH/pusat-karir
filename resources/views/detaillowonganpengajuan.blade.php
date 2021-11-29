@@ -98,7 +98,7 @@
         <th width="150px">Bidang Industri</th>
         <th width="50px">:</th>
         <th>{{ $lowongan->bidangindustri }}</th>
-        </tr>
+      </tr>
       <tr>
         <th width="150px">Tgl Awal</th>
         <th width="50px">:</th>

@@ -197,6 +197,7 @@
     <table class="table">
         <thead>
           <tr>
+            <th scope="col">No</th>
             <th scope="col">Id Lowongan</th>
             <th scope="col">Nama</th>
             <th scope="col">Email</th>
@@ -216,8 +217,10 @@
           </tr>
         </thead>
         <tbody>
+          <?php $no=1; ?>
           @foreach ($lowongan as $data)
             <tr>
+              <th>{{ $no++ }}</th>
               <td>{{ $data->id_lowongan }}</td>
               <td>{{ $data->name }}</td>
               <td>{{ $data->email }}</td>

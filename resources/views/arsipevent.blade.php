@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/carousel/">
 
+    
+
+    <!-- Bootstrap core CSS -->
+{{-- <link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> --}}
+
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
@@ -35,7 +50,9 @@
       }
     </style>
 
-
+    
+    <!-- Custom styles for this template -->
+    {{-- <link href="carousel.css" rel="stylesheet"> --}}
   </head>
 <body>
 <header>
@@ -50,12 +67,6 @@
       @include('nav')
      
     </div>
-    <div class="col-4 float-right">
-      <form class="form-inline my-2 my-lg-0" action=" " method="GET">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" value="cari">Search</button>
-      </form>
-    </div>
   </nav>
 </header>
     <!-- Marketing messaging and featurettes
@@ -66,45 +77,6 @@
 
     <div class="accrodion" id="accrodionArsip">
 
-      {{-- Approve Lowongan --}}
-
-      <div class="accordion-item">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Lowongan Approval
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accrodionArsip">
-            <div class="card-body">
-              
-               <!-- START THE FEATURETTES -->
-                  @foreach( $lowongan as $data )
-                  <hr class="featurette-divider">
-
-                  <div class="d-flex justify-content-between featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
-                    </div>
-                    
-                    <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
-                    </div>
-                  </div>
-                  @endforeach
-
-                <!-- /END THE FEATURETTES -->
-
-            </div>
-          </div>
-        </div>
-      </div>
-
       {{-- Arsip Lowongan --}}
 
       <div class="accordion-item">
@@ -112,7 +84,7 @@
           <div class="card-header" id="headingTwo">
             <h2 class="mb-0">
               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lowongan Terarsip
+                Event Terarsip
               </button>
             </h2>
           </div>
@@ -126,15 +98,15 @@
 
                   <div class="d-flex justify-content-between featurette">
                     <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->tgl_akhir)->locale('id')->isoFormat('LL') }}</span>
+                      <h2 class="featurette-heading">{{ $data->nama_event }} <span class="text-muted"></span></h2>
+                      <p class="lead">{{ $data->deskripsi }}</p>
+                      <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->waktu)->locale('id')->isoFormat('LL') }}</span>
                       <br />
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
+                      <a href="admin/detail/{{ $data->id_event }}" class="btn btn-secondary">View details</a>
                     </div>
                     
                     <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
+                      <img src="{{ url('foto/'.$data->foto_event) }}" style="max-height: 150px" class="img-thumbnail">
                     </div>
                   </div>
                   @endforeach
@@ -147,6 +119,7 @@
       </div>
         
     </div>
+
 
 </div><!-- /.container -->
 

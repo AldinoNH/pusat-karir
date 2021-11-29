@@ -38,9 +38,19 @@ class HomeController extends Controller
     public function arsiplowongan()
     {
         $data = [
-            'lowongan' => $this->AdminModel->allDatalowongankerjatampil(),
+            'lowongan' => $this->AdminModel->allDatalowongankerjaapprove(),
+            'arsip'    => $this->AdminModel->allDatalowongankerjaarsip()
         ];
         return view('arsiplowongan', $data);
+
+    }
+
+    public function arsipevent()
+    {
+        $data = [
+            'arsip'    => $this->AdminModel->allDataevebtarsip()
+        ];
+        return view('arsipevent', $data);
 
     }
 
@@ -189,5 +199,11 @@ class HomeController extends Controller
 
         $this->AdminModel->addData($data);
         return view('inputlowongankerja')->with('pesan', 'Data Berhasil Di Submit !!!');
+    }
+
+    public function searchlowongan(Request $request) {
+
+        return response()->json( $this->AdminModel->searchLowongan( $request->search ) ?? [] );
+
     }
 }

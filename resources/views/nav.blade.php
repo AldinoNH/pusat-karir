@@ -18,6 +18,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item {{ request()->is('upcomingevent') ? 'active' : '' }}" href="/upcomingevent">Upcoming Event</a>
           <a class="dropdown-item {{ request()->is('event') ? 'active' : '' }}" href="/event">Past Event</a>
+          <a class="dropdown-item {{ request()->is('arsipevent') ? 'active' : '' }}" href="/arsipevent">Arsip Event</a>
         </div>
         </li>
 </ul>

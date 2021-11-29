@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,26 @@ class AdminModel extends Model
     {
         return DB::table('lowongan')
         ->where('approved', 1)
-        ->paginate(12);
+        ->paginate(6);
+    }
+
+    public function allDatalowongankerjaapprove()
+    {
+        return DB::table('lowongan')
+        ->where('approved', 1)
+        ->get();
+    }
+
+    public function allDatalowongankerjaarsip(){
+        return DB::table('lowongan')
+        ->where('tgl_akhir' , '<' ,Carbon::now()->format('Y-m-d'))
+        ->get();
+    }
+
+    public function allDataevebtarsip() {
+        return DB::table('tbl_event')
+        ->where('waktu' , '<' , Carbon::now()->format('Y-m-d'))
+        ->get();
     }
 
     public function allDataadmin()
@@ -163,4 +183,14 @@ class AdminModel extends Model
         DB::table('tbl_event')->insert($data);
     }
 
+    public function searchLowongan( $search ) {
+
+        $searchval = '%' . $search . '%';
+
+        return DB::table('lowongan')
+            ->orWhere('judul_lowongan' , 'like' , $searchval)
+            ->orWhere('name' , 'like' , $searchval)
+            ->get();
+        
+    }
 }
