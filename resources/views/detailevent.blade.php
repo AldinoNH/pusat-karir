@@ -61,6 +61,17 @@
           <p class="text-muted">Tanggal Event {{ Carbon\Carbon::parse($tbl_event->waktu)->locale('id')->isoFormat('LL') }}</p>
           <h5 class="card-title">{{ $tbl_event->nama_event }}</h5>
           <p class="card-text">{{ $tbl_event->deskripsi }}</p>
+
+          @if (( $tbl_event->waktu < Carbon\Carbon::now()->format('Y-m-d') ))
+            @if ($tbl_event->link === null && $tbl_event->upload === null)
+              <span class="btn btn-secondary disabled">Belum ada dokumentasi</span>
+            @else
+              <a href="/stream/past/event/{{ $tbl_event->id_event }}" class="btn btn-secondary">Lihat Dokumentasi</a>
+            @endif
+          @endif
+
+          <br />
+          
           <a href="/" class="btn btn-link">Kembali</a>
         </div>
       </div>

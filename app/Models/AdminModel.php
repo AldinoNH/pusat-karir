@@ -13,6 +13,7 @@ class AdminModel extends Model
     {
         return DB::table('lowongan')
         ->where('approved', 1)
+        ->where('tgl_akhir' , '>=' , Carbon::now()->format('Y-m-d'))
         ->paginate(6);
     }
 
@@ -20,6 +21,7 @@ class AdminModel extends Model
     {
         return DB::table('lowongan')
         ->where('approved', 1)
+        ->where('tgl_akhir' , '>=' , Carbon::now()->format('Y-m-d'))
         ->paginate(6);
     }
 
@@ -30,8 +32,17 @@ class AdminModel extends Model
         ->get();
     }
 
+    public function allDatalowongankerjaannotapproved()
+    {
+        return DB::table('lowongan')
+        ->orWhere('approved', null)
+        ->orWhere('approved' , 0)
+        ->get();
+    }
+
     public function allDatalowongankerjaarsip(){
         return DB::table('lowongan')
+        ->where('approved' , 1)
         ->where('tgl_akhir' , '<' ,Carbon::now()->format('Y-m-d'))
         ->get();
     }
@@ -52,7 +63,7 @@ class AdminModel extends Model
     }
     public function allDataevent()
     {
-        return DB::table('tbl_event')->get();
+        return DB::table('tbl_event')->where('waktu' , '>=' , Carbon::now()->format('Y-m-d'))->get();
     }
     public function allDataberita()
     {
@@ -183,14 +194,57 @@ class AdminModel extends Model
         DB::table('tbl_event')->insert($data);
     }
 
-    public function searchLowongan( $search ) {
+    public function filterLowongan( $request ) {
+
+        $search = $request['search'] ?? null;
+        $industri = $request['industri'] ?? null;
+        $posisi = $request['posisi'] ?? null;
+
+        $query = DB::table('lowongan')->where('approved' , 1)->where('tgl_akhir' , '>=' , Carbon::now()->format('Y-m-d'));
+
+        if( $search !== null ) {
+            $query = $query->where(function($q) use ($search) {
+                $searchval = '%' . $search . '%';
+                $q->orWhere('judul_lowongan' , 'like' , $searchval)->orWhere('name' , 'like' , $searchval)->orWhere('deskripsi' , 'like' , $searchval);
+            });
+        }
+        
+        if($industri !== null){
+            $query = $query->where('bidangindustri' , $industri);
+        }
+
+        if( $posisi !== null ){
+            $query = $query->where('kategoriposisi' , $posisi);
+        }
+
+        return $query->get();
+        
+    }
+
+    public function searchEvent($search , $a) {
 
         $searchval = '%' . $search . '%';
 
-        return DB::table('lowongan')
-            ->orWhere('judul_lowongan' , 'like' , $searchval)
-            ->orWhere('name' , 'like' , $searchval)
-            ->get();
-        
+        if( $a ) {
+
+            return DB::table('tbl_event')->where('waktu' , '<' , Carbon::now()->format('Y-m-d'))
+            ->where(function ($q) use ($searchval) {
+    
+                $q->orWhere('nama_event' , 'like' , $searchval)
+                ->orWhere('deskripsi' , 'like' , $searchval);
+    
+            })->get();
+
+        }
+
+        return DB::table('tbl_event')->where('waktu' , '>=' , Carbon::now()->format('Y-m-d'))
+        ->where(function ($q) use ($searchval) {
+
+            $q->orWhere('nama_event' , 'like' , $searchval)
+            ->orWhere('deskripsi' , 'like' , $searchval);
+
+        })->get();
+
     }
+
 }
