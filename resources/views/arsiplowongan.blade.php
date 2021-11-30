@@ -148,6 +148,50 @@
         
     </div>
 
+
+    {{-- Arsip Not Aprrove --}}
+
+    <div class="accordion-item">
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              Lowongan Tidak di Approved
+            </button>
+          </h2>
+        </div>
+    
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accrodionArsip">
+          <div class="card-body">
+            
+             <!-- START THE FEATURETTES -->
+                @foreach( $notapproved as $data )
+                <hr class="featurette-divider">
+
+                <div class="d-flex justify-content-between featurette">
+                  <div class="col-md-7">
+                    <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
+                    <p class="lead">{{ $data->kualifikasi }}</p>
+                    <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->tgl_akhir)->locale('id')->isoFormat('LL') }}</span>
+                    <br />
+                    <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
+                  </div>
+                  
+                  <div class="col-md-2">
+                    <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
+                  </div>
+                </div>
+                @endforeach
+
+              <!-- /END THE FEATURETTES -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
 </div><!-- /.container -->
 
 <div class="container">

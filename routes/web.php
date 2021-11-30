@@ -36,9 +36,11 @@ Route::get('/admin/detailevent/{id_event}',[HomeController::class,'detailevent']
 
 // Ajax query
 
-Route::get('/lowongan' , [HomeController::class , 'searchlowongan'])->name('search.lowongan');
+Route::get('/lowongan/filter' , [HomeController::class , 'lowonganfilter'])->name('lowongan.filter');
 
+Route::get('/event/search' , [HomeController::class , 'searchevent']);
 
+Route::get('/stream/past/event/{id_event}' , [HomeController::class , 'streamevent']);
 
 Auth::routes();
 

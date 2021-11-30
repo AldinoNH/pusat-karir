@@ -127,7 +127,13 @@
   <div class="row">
     <div class="col-9">
       <div class="card bg-light">
-        <div class="card-header">Daftar Lowongan kerja</div>
+        <div class="card-header">
+          <div class="d-flex flex-column justify-content-between">
+            <h4>
+              Daftar Lowongan kerja
+            </h4>
+          </div>
+        </div>
         <div class="card-body p-0">
           <div class="d-flex">
             <div class="card-header">
@@ -137,31 +143,31 @@
                 <h6> Kategori Posisi </h6>
 
                 <div id="list-kategori-posisi" class="list-group list-group-flush my-4">
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="all">Semua Kategori</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="administrasi">Administrasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kehutanan">Agrikultur / Kehutanan / Perikanan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="akuntansi">Akuntansi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="audit">Audit</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="bioteknologi">Bioteknologi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="catring">Catering</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="desain">Desain</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="keamanan">Keamanan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kesehatan">Kesehatan dan Kecantikan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="kimia">Kimia</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="konstruksi">Konstruksi dan Bangunan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="layanan bisnis">Layanan Bisnis</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="media dan periklanan">Media dan Periklanan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="migas dan pertambangan">Migas dan Pertambangan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="otomotif">Otomotif</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="pendidikan">Pendidikan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="penerbangan">Penerbangan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="perbankan">Perbankan / Finansial</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="properti">Properti</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="r&d dan lab">R&D dan Lab</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="teknologi informatika">Teknologi Informatika</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="telekomunikasi">Telekomunikasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="teleportasi">Transportasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="umum">Umum</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Semua Kategori">Semua Kategori</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Administrasi">Administrasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Agrikultur/Kehutanan/Perikanan">Agrikultur/Kehutanan/Perikanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Akuntansi">Akuntansi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Audit">Audit</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Bioteknologi">Bioteknologi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Catering">Catering</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Desain">Desain</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Keamanan">Keamanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kesehatan dan Kecantikan">Kesehatan dan Kecantikan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kimia">Kimia</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Konstruksi dan Bangunan">Konstruksi dan Bangunan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Layanan Bisnis">Layanan Bisnis</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Media dan Periklanan">Media dan Periklanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Migas dan Pertambangan">Migas dan Pertambangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Otomotif">Otomotif</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Pendidikan">Pendidikan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Penerbangan">Penerbangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Perbankan / Finansial">Perbankan/Finansial</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Properti">Properti</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="R&D dan Lab">R&D dan Lab</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Teknologi Informatika">Teknologi Informatika</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Telekomunikasi">Telekomunikasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Transportasi">Transportasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Umum">Umum</button>
                 </div>
               </div>
               
@@ -169,44 +175,44 @@
               <div>
                 <h6>Kategori Industri</h6>
                 <div id="list-kategori-industri" class="list-group scrollable my-4">
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Semua Industri</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Akuntan/Auditor</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Asuransi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Ekspedisi / Agen Cargo</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Elektronika/Semikonduktor</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Farmasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Furnitur</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Garmen/Tekstil</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hiburan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hotel</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Hukum</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Internet</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kehutanan/Perkayuan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Keuangan/Bank</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kimia</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Komputer/TI</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Konstruksi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Konsultan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kosmetik</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Logam</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Logistik/Transportasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Mainan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Manufaktur</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Media</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Mekanik/Listrik</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Otomotif</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Minyak dan Gas</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Makanan/Minuman</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Penerbangan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Pengolahan sumber daya alam lainnya</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Percetakan dan Kemasan</a>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Kesehatan<buttona>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Perikanan</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Ritel</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Telekomunikasi</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Travel</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Agribisnis</button>
-                  <button type="button" class="list-group-item list-group-item-action" data-kategori="">Lain-lain</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Semua Industri">Semua Industri</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Akuntan/Auditor">Akuntan/Auditor</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Asuransi">Asuransi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Ekspedisi / Agen Cargo">Ekspedisi / Agen Cargo</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Elektronika/Semikonduktor">Elektronika/Semikonduktor</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Farmasi">Farmasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Furnitur">Furnitur</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Garmen/Tekstil">Garmen/Tekstil</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Hiburan">Hiburan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Hotel">Hotel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Hukum">Hukum</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Internet">Internet</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kehutanan/Perkayuan">Kehutanan/Perkayuan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Keuangan/Bank">Keuangan/Bank</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kimia">Kimia</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Komputer/TI">Komputer/TI</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Konstruksi">Konstruksi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Konsultan">Konsultan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kosmetik">Kosmetik</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Logam">Logam</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Logistik/Transportasi">Logistik/Transportasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Mainan">Mainan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Manufaktur">Manufaktur</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Media">Media</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Mekanik/Listrik">Mekanik/Listrik</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Otomotif">Otomotif</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Minyak dan Gas">Minyak dan Gas</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Makanan/Minuman">Makanan/Minuman</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Penerbangan">Penerbangan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Pengolahan sumber daya alam lainnya">Pengolahan sumber daya alam lainnya</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Percetakan dan Kemasan">Percetakan dan Kemasan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Kesehatan">Kesehatan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Perikanan">Perikanan</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Ritel">Ritel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Telekomunikasi">Telekomunikasi</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Travel">Travel</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Agribisnis">Agribisnis</button>
+                  <button type="button" class="list-group-item list-group-item-action" data-kategori="Lain-lain">Lain-lain</button>
                 </div>
               </div>
 
@@ -217,10 +223,12 @@
               <div class="row">
                 <div class="col-12 py-4">
                   <form class="form-inline my-2 my-lg-0" method="GET">
-                    <input class="form-control col-12 mr-sm-2" id="search-lowongan" autofocus type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control col-12 mr-sm-2" id="search-lowongan" type="search" placeholder="Search" aria-label="Search">
                   </form>
                 </div>
               </div>
+
+              <div class="p-3" id="text-filter"></div>
 
               <div id="searchresult">
 
@@ -273,74 +281,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">
-      $(document).ready(function () {
-      
-
-        $('#list-kategori-posisi button').on('click', function (event) {
-          
-          var list = $(event.target)
-          const kategori = list.data('kategori')
-
-        })
-
-        $('#list-kategori-industri button').on('click', function (event) {
-          
-          var list = $(event.target)
-          const kategori = list.data('kategori')
-
-        })
-
-        $('#search-lowongan').keyup((ev) => {
-          
-
-
-          const value = ev.target.value
-
-          if( value === '' ) {
-            $('#firstquery').removeAttr('class')
-            $('#searchresult').html('')
-          }else{
-
-            $('#firstquery').attr('class' , 'd-none')
-
-            $('#searchresult').html(`<div class="col-12" style="text-align: center">Loading ...</div>`)
-
-            $.get(`{{ route('search.lowongan') }}?search=${value}` , (res) => {
-  
-              let reshtml = `<div class="row">`
-
-              if( res.length !== 0 ) {
-
-                res.map(val => {
-                  reshtml += 
-                  `<div class="col-md-4">
-                      <img class="content img-thumbnail" src="{{ url('foto/${val.foto}') }}" width="100px">
-                      <h2>${val.judul_lowongan}</h2>
-                      <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
-                      <p><a class="btn btn-secondary" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
-                    </div>`
-                })
-
-              }else{
-
-                reshtml += `<div class="col-12 text-center">Tidak ada hasil</div>`
-
-              }
-
-
-              reshtml += `</div>`
-
-              $('#searchresult').html(reshtml)
-  
-            })
-          }
-
-
-        })
-
-      });
-    </script>
+    <script type="text/javascript" src="{{ url('js/filter.js') }}"></script>
   </body>
 </html>

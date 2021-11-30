@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\AdminModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -39,7 +40,8 @@ class HomeController extends Controller
     {
         $data = [
             'lowongan' => $this->AdminModel->allDatalowongankerjaapprove(),
-            'arsip'    => $this->AdminModel->allDatalowongankerjaarsip()
+            'arsip'    => $this->AdminModel->allDatalowongankerjaarsip(),
+            'notapproved' => $this->AdminModel->allDatalowongankerjaannotapproved(),
         ];
         return view('arsiplowongan', $data);
 
@@ -68,7 +70,7 @@ class HomeController extends Controller
     public function tampilevent()
     {
         $data = [
-            'tbl_event' => $this->AdminModel->allDataevent(),
+            'tbl_event' => $this->AdminModel->allDataevebtarsip(),
         ];
         return view('event', $data);
     }
@@ -200,9 +202,27 @@ class HomeController extends Controller
         return view('inputlowongankerja')->with('pesan', 'Data Berhasil Di Submit !!!');
     }
 
-    public function searchlowongan(Request $request) {
+    public function lowonganfilter(Request $request) {
 
-        return response()->json( $this->AdminModel->searchLowongan( $request->search ) ?? [] );
+        return response()->json( $this->AdminModel->filterLowongan( $request->all() ) ?? [] );
 
     }
+
+    public function searchevent(Request $request) {
+
+        return response()->json($this->AdminModel->searchEvent($request->search , $request->a));
+
+    }
+
+    public function streamevent($id){
+
+        $data = DB::table('tbl_event')->where('id_Event' , $id)->first();
+        
+        $stream = new \App\Helper\VideoStream( \public_path("/video_event/$data->upload") );
+
+        $stream->start();
+
+    }
+
+
 }
