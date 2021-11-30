@@ -222,7 +222,7 @@
 
                         <div class="form-group">
                             <label>Deskripsi</label>
-                            <input name="judul_lowongan" class="form-control" value="{{ $lowongan->deskripsi }}">
+                            <input name="deskripsi" class="form-control" value="{{ $lowongan->deskripsi }}">
                             <div class="text-danger">
                                 @error('deskripsi')
                                     {{ $message }}
@@ -231,8 +231,83 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Bidang Industri</label>
+                            <select name="bidangindustri" class="form-control">
+                                <option value>{{ $lowongan->bidangindustri }}</option>
+                                <option>Administrasi</option>
+                                <option>Agrikultur/Kehutanan/Perikanan</option>
+                                <option>Akuntansi</option>
+                                <option>Audit </option>
+                                <option>Bioteknologi</option>
+                                <option>Catering </option>
+                                <option>Desain</option>
+                                <option>Keamanan</option>
+                                <option>Kesehatan dan Kecantikan </option>
+                                <option>Kimia </option>
+                                <option>Konstruksi dan Bangunan</option>
+                                <option>Layanan Bisnis </option>
+                                <option>Media dan Periklanan</option>
+                                <option>Migas dan Pertambangan</option>
+                                <option>Otomotif</option>
+                                <option>Pendidikan</option>
+                                <option>Penerbangan </option>
+                                <option>Perbankan/Finansial</option>
+                                <option>Properti</option>
+                                <option>R&D dan Lab</option>
+                                <option>Teknologi Informatika</option>
+                                <option>Telekomunikasi</option>
+                                <option>Transportasi</option>
+                                <option>Umum</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Kategori Posisi</label>
+                            <select name="kategoriposisi" class="form-control">
+                                <option value>{{ $lowongan->kategoriposisi }}</option>
+                                <option>Akuntan/Auditor</option>
+                                <option>Asuransi</option>
+                                <option>Ekspedisi / Agen Cargo</option>
+                                <option>Elektronika/Semikonduktor </option>
+                                <option>Farmasi</option>
+                                <option>Furnitur </option>
+                                <option>Garmen/Tekstil</option>
+                                <option>Hiburan</option>
+                                <option>Hotel </option>
+                                <option>Hukum </option>
+                                <option>Internet</option>
+                                <option>Kehutanan/Perkayuan </option>
+                                <option>Keuangan/Bank</option>
+                                <option>Kimia</option>
+                                <option>Komputer/TI</option>
+                                <option>Konstruksi</option>
+                                <option>Konsultan </option>
+                                <option>Kosmetik</option>
+                                <option>Logam</option>
+                                <option>Logistik/Transportasi</option>
+                                <option>Mainan</option>
+                                <option>Manufaktur</option>
+                                <option>Media</option>
+                                <option>Mekanik/Listrik</option>
+                                <option>Otomotif</option>
+                                <option>Minyak dan Gas </option>
+                                <option>Makanan/Minuman</option>
+                                <option>Penerbangan</option>
+                                <option>Pengolahan sumber daya alam lainnya</option>
+                                <option>Percetakan dan Kemasan</option>
+                                <option>Kesehatan </option>
+                                <option>Perikanan </option>
+                                <option>Ritel</option>
+                                <option>Telekomunikasi </option>
+                                <option>Travel </option>
+                                <option>Agribisnis </option>
+                                <option>Lain-lain </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label>Tanggal Awal</label>
-                            <input type="date" name="tgl_awal" class="form-control">
+                            <input type="date" name="tgl_awal" class="form-control" value="{{ $lowongan->tgl_awal }}">
                             <div class="text-danger">
                                 @error('tgl_awal')
                                     {{ $message }}
@@ -242,7 +317,7 @@
 
                         <div class="form-group">
                             <label>Tanggal Akhir</label>
-                            <input type="date" name="tgl_akhir" class="form-control">
+                            <input type="date" name="tgl_akhir" class="form-control" value="{{ $lowongan->tgl_akhir }}">
                             <div class="text-danger">
                                 @error('tgl_akhir')
                                     {{ $message }}
@@ -293,7 +368,7 @@
                         <div class="form-group">
                             <label>Provinsi</label>
                             <select name="provinsi" class="form-control">
-                                <option selected>Choose...</option>
+                                <option value>{{ $lowongan->provinsi }}</option>
                                 <option>Aceh</option>
                                 <option>Sumatera Utara</option>
                                 <option>Sumatera Barat</option>
