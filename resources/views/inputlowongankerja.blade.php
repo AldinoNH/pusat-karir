@@ -147,81 +147,79 @@
                         <div class="form-group">
                             <label>Bidang Industri</label>
                             <select name="bidangindustri" class="form-control">
-                                <option selected>Semua Industri</option>
-                                <option>Administrasi</option>
-                                <option>Agrikultur/Kehutanan/Perikanan</option>
-                                <option>Akuntansi</option>
-                                <option>Audit </option>
-                                <option>Bioteknologi</option>
-                                <option>Catering </option>
-                                <option>Desain</option>
-                                <option>Keamanan</option>
-                                <option>Kesehatan dan Kecantikan </option>
-                                <option>Kimia </option>
-                                <option>Konstruksi dan Bangunan</option>
-                                <option>Layanan Bisnis </option>
-                                <option>Media dan Periklanan</option>
-                                <option>Migas dan Pertambangan</option>
-                                <option>Otomotif</option>
-                                <option>Pendidikan</option>
-                                <option>Penerbangan </option>
-                                <option>Perbankan/Finansial</option>
-                                <option>Properti</option>
-                                <option>R&D dan Lab</option>
-                                <option>Teknologi Informatika</option>
-                                <option>Telekomunikasi</option>
-                                <option>Transportasi</option>
-                                <option>Umum</option>
+                                <option selected value="all">Semua Industri</option>
+                                <option value="administrasi">Administrasi</option>
+                                <option value="kehutanan">Agrikultur/Kehutanan/Perikanan</option>
+                                <option value="akuntansi">Akuntansi</option>
+                                <option value="audit">Audit </option>
+                                <option value="bioteknologi">Bioteknologi</option>
+                                <option value="catring">Catering </option>
+                                <option value="desain">Desain</option>
+                                <option value="keamanan">Keamanan</option>
+                                <option value="kesehatan">Kesehatan dan Kecantikan </option>
+                                <option value="kimia">Kimia </option>
+                                <option value="konstruksi">Konstruksi dan Bangunan</option>
+                                <option value="layanan bisnis">Layanan Bisnis </option>
+                                <option value="media dan periklanan">Media dan Periklanan</option>
+                                <option value="migas dan pertambangan">Migas dan Pertambangan</option>
+                                <option value="otomotif">Otomotif</option>
+                                <option value="pendidikan">Pendidikan</option>
+                                <option value="penerbangan">Penerbangan </option>
+                                <option value="perbankan">Perbankan/Finansial</option>
+                                <option value="properti">Properti</option>
+                                <option value="r&d dan lab">R&D dan Lab</option>
+                                <option value="teknologi informatika">Teknologi Informatika</option>
+                                <option value="telekomunikasi">Telekomunikasi</option>
+                                <option value="transportasi">Transportasi</option>
+                                <option value="umum">Umum</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Kategori Posisi</label>
                             <select name="kategoriposisi" class="form-control">
-                                <option selected>Semua Kategori</option>
-                                <option>Akuntan/Auditor</option>
-                                <option>Asuransi</option>
-                                <option>Ekspedisi / Agen Cargo</option>
-                                <option>Elektronika/Semikonduktor </option>
-                                <option>Farmasi</option>
-                                <option>Furnitur </option>
-                                <option>Garmen/Tekstil</option>
-                                <option>Hiburan</option>
-                                <option>Hotel </option>
-                                <option>Hukum </option>
-                                <option>Internet</option>
-                                <option>Kehutanan/Perkayuan </option>
-                                <option>Keuangan/Bank</option>
-                                <option>Kimia</option>
-                                <option>Komputer/TI</option>
-                                <option>Konstruksi</option>
-                                <option>Konsultan </option>
-                                <option>Kosmetik</option>
-                                <option>Logam</option>
-                                <option>Logistik/Transportasi</option>
-                                <option>Mainan</option>
-                                <option>Manufaktur</option>
-                                <option>Media</option>
-                                <option>Mekanik/Listrik</option>
-                                <option>Otomotif</option>
-                                <option>Minyak dan Gas </option>
-                                <option>Makanan/Minuman</option>
-                                <option>Penerbangan</option>
-                                <option>Pengolahan sumber daya alam lainnya</option>
-                                <option>Percetakan dan Kemasan</option>
-                                <option>Kesehatan </option>
-                                <option>Perikanan </option>
-                                <option>Ritel</option>
-                                <option>Telekomunikasi </option>
-                                <option>Travel </option>
-                                <option>Agribisnis </option>
-                                <option>Lain-lain </option>
+                                <option selected value="all">Semua Kategori</option>
+                                <option value="akuntan">Akuntan/Auditor</option>
+                                <option value="asuransi">Asuransi</option>
+                                <option value="ekspedisi">Ekspedisi / Agen Cargo</option>
+                                <option value="elektronika">Elektronika/Semikonduktor </option>
+                                <option value="farmasi">Farmasi</option>
+                                <option value="furnitur">Furnitur </option>
+                                <option value="garmen">Garmen/Tekstil</option>
+                                <option value="hiburan">Hiburan</option>
+                                <option value="hotel">Hotel </option>
+                                <option value="hukum">Hukum </option>
+                                <option value="internet">Internet</option>
+                                <option value="kehutanan">Kehutanan/Perkayuan </option>
+                                <option value="keuangan">Keuangan/Bank</option>
+                                <option value="kimia">Kimia</option>
+                                <option value="komputer">Komputer/TI</option>
+                                <option value="konstruksi">Konstruksi</option>
+                                <option value="konsultan">Konsultan </option>
+                                <option value="kosmetik">Kosmetik</option>
+                                <option value="logam">Logam</option>
+                                <option value="logistik">Logistik/Transportasi</option>
+                                <option value="mainan">Mainan</option>
+                                <option value="manufaktur">Manufaktur</option>
+                                <option value="media">Media</option>
+                                <option value="mekanik">Mekanik/Listrik</option>
+                                <option value="otomotif">Otomotif</option>
+                                <option value="migas">Minyak dan Gas </option>
+                                <option value="makanan">Makanan/Minuman</option>
+                                <option value="penerbangan">Penerbangan</option>
+                                <option value="pengolahan sda">Pengolahan sumber daya alam lainnya</option>
+                                <option value="percetakan">Percetakan dan Kemasan</option>
+                                <option value="kesehatan">Kesehatan </option>
+                                <option value="perikanan">Perikanan </option>
+                                <option value="ritel">Ritel</option>
+                                <option value="telekomunikasi">Telekomunikasi </option>
+                                <option value="travel">Travel </option>
+                                <option value="agribisnis">Agribisnis </option>
+                                <option value="lainnya">Lain-lain </option>
                             </select>
                         </div>
 
                         <div class="form-group">
-=======
->>>>>>> 7494b0e502472144d43db09a2db5dc34778cf81f
                             <label>Tanggal Awal</label>
                             <input type="date" name="tgl_awal" class="form-control">
                             <div class="text-danger">
