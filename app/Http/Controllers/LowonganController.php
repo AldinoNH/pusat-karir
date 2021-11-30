@@ -26,6 +26,15 @@ class LowonganController extends Controller
         return view('admin', $data);
     }
 
+    public function adminarsiplowongan()
+    {
+
+        $data = [
+            'lowongan' => $this->AdminModel->allDataadmin(),
+        ];
+        return view('adminarsiplowongan', $data);
+    }
+
     public function pengajuan()
     {
         $data = [
@@ -48,6 +57,14 @@ class LowonganController extends Controller
             'tbl_event' => $this->AdminModel->allDataevent(),
         ];
         return view('adminevent', $data);
+    }
+
+    public function admineventarsip()
+    {
+        $data = [
+            'tbl_event' => $this->AdminModel->allDataevent(),
+        ];
+        return view('admineventarsip', $data);
     }
 
     public function berita()

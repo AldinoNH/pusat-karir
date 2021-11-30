@@ -93,6 +93,16 @@
               <td>{{ $lowongan->persyaratan }}</td>
             </tr>
 
+            <tr>
+              <th>Persyaratan</th>
+              <td>{{ $lowongan->bidangindustri }}</td>
+            </tr>
+
+            <tr>
+              <th>Persyaratan</th>
+              <td>{{ $lowongan->kategoriposisi }}</td>
+            </tr>
+
           </table>
 
           <p class="text-muted">dibuat {{ Carbon\Carbon::parse($lowongan->tgl_akhir)->locale('id')->diffForHumans() }}</p>

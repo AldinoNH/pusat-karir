@@ -48,6 +48,7 @@ Route::get('/home',[LowonganController::class,'index'])->name('home');
 
 Route::group(['middleware' => 'admin'], function() {
     Route::get('/admin',[LowonganController::class,'index'])->name('admin');
+    Route::get('/admin/lowongankerja/arsip',[LowonganController::class,'adminarsiplowongan']);
     Route::get('/admin/add',[LowonganController::class,'add']);
     Route::get('/admin/add/berita',[LowonganController::class,'addberita']);
     Route::get('/admin/add/pengajuan',[LowonganController::class,'addpengajuan']);
@@ -75,6 +76,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/admin/printpdfeventdownload',[LowonganController::class,'printpdfeventdownload']);
     Route::get('/admin/addevent',[LowonganController::class,'addevent']);
     Route::get('/admin/event',[LowonganController::class,'event'])->name('event');
+    Route::get('/admin/event/arsip',[LowonganController::class,'admineventarsip']);
     Route::get('/admin/berita',[LowonganController::class,'berita'])->name('berita');
     Route::get('/pengajuan',[LowonganController::class,'pengajuan'])->name('pengajuan');
     Route::get('/print',[LowonganController::class,'cetakform'])->name('print');
