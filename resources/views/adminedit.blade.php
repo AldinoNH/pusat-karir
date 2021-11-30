@@ -233,7 +233,7 @@
                         <div class="form-group">
                             <label>Bidang Industri</label>
                             <select name="bidangindustri" class="form-control">
-                                <option value>{{ $lowongan->bidangindustri }}</option>
+                                <option selected>{{ $lowongan->bidangindustri }}</option>
                                 <option>Administrasi</option>
                                 <option>Agrikultur/Kehutanan/Perikanan</option>
                                 <option>Akuntansi</option>
@@ -264,7 +264,7 @@
                         <div class="form-group">
                             <label>Kategori Posisi</label>
                             <select name="kategoriposisi" class="form-control">
-                                <option value>{{ $lowongan->kategoriposisi }}</option>
+                                <option selected>{{ $lowongan->kategoriposisi }}</option>
                                 <option>Akuntan/Auditor</option>
                                 <option>Asuransi</option>
                                 <option>Ekspedisi / Agen Cargo</option>
@@ -368,7 +368,7 @@
                         <div class="form-group">
                             <label>Provinsi</label>
                             <select name="provinsi" class="form-control">
-                                <option value>{{ $lowongan->provinsi }}</option>
+                                <option selected>{{ $lowongan->provinsi }}</option>
                                 <option>Aceh</option>
                                 <option>Sumatera Utara</option>
                                 <option>Sumatera Barat</option>
