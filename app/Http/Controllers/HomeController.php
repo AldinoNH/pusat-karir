@@ -137,7 +137,7 @@ class HomeController extends Controller
             'name' => 'required|min:4',
             'email' => 'required|email',
             'judul_lowongan' => 'required',
-            'deskripsi' => 'required|max:20',
+            'deskripsi' => 'required',
             'kategoriposisi' => 'required',
             'bidangindustri' => 'required',
             'tgl_awal' => 'required',
@@ -161,7 +161,6 @@ class HomeController extends Controller
 
             'judul_lowongan.required' => 'judul lowongan kerja tidak boleh kosong !!!',
             'deskripsi.required' => 'Deskripsi tidak boleh kosong !!!',
-            'deskripsi.max' => 'deskripsi max 20 karakter !!!',
             'kategoriposisi.required' => 'Kategori Posisi harus dipilih !!!',
             'bidangindustri.required' => 'Bidang industri harus dipilih !!!',
             'tgl_awal.required' => 'tgl harus diisi !!!',
