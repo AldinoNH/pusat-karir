@@ -24,11 +24,24 @@
         user-select: none;
       }
 
+      .top {
+        position: relative; top: 66px;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
+
+      @media (max-width: 500px) {
+
+        .top {
+          top: 100px;
+        }
+
+      }
+
       body {
           margin-top: 5%;
           
@@ -50,9 +63,9 @@
       @include('nav')
      
     </div>
-    <div class="col-4 float-right">
+    <div class="col-md-4 float-right">
       <form class="form-inline my-2 my-lg-0" action=" " method="GET">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchevenet">
+        <input class="form-control col mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchevenet">
       </form>
     </div>
   </nav>
@@ -61,7 +74,7 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container d-flex flex-column justify-content-between" style="position: relative; top: 66px">
+    <div class="container d-flex flex-column justify-content-between top">
 
       <div id="resultQuery">
 

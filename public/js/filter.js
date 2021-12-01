@@ -56,12 +56,12 @@ $(document).ready(function () {
 
         res.map(val => {
           reshtml += 
-          `<div class="col-md-4">
-              <img class="content img-thumbnail" src="${window.location.origin}/foto/${val.foto}" width="100px">
-              <h2>${val.judul_lowongan}</h2>
-              <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
-              <p><a class="btn btn-secondary" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
-            </div>`
+          `<div class="col-md-4 item-lowongan">
+            <img class="content img-thumbnail mx-auto d-block" src="${window.location.origin}/foto/${val.foto}" width="100px">
+            <h2 class="text-center">${val.judul_lowongan}</h2>
+            <p class="text-center">Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
+            <p><a class="btn btn-secondary col-md-12" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
+          </div>`
         })
 
       }else{
@@ -89,7 +89,7 @@ $(document).ready(function () {
     var list = $(event.target)
     const kategori = list.data('kategori')
     
-    if( kategori === 'Semua Kategori' ) {
+    if( kategori === 'Semua Industri' ) {
       query.searchParams.delete('industri')
       $('#firstquery').removeAttr('class')
       $('#searchresult').html('')
@@ -109,12 +109,12 @@ $(document).ready(function () {
 
           res.map(val => {
             reshtml += 
-            `<div class="col-md-4">
-                <img class="content img-thumbnail" src="${window.location.origin}/foto/${val.foto}" width="100px">
-                <h2>${val.judul_lowongan}</h2>
-                <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
-                <p><a class="btn btn-secondary" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
-              </div>`
+            `<div class="col-md-4 item-lowongan">
+              <img class="content img-thumbnail mx-auto d-block" src="${window.location.origin}/foto/${val.foto}" width="100px">
+              <h2 class="text-center">${val.judul_lowongan}</h2>
+              <p class="text-center">Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
+              <p><a class="btn btn-secondary col-md-12" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
+            </div>`
           })
 
         }else{
@@ -159,11 +159,11 @@ $(document).ready(function () {
 
         res.map(val => {
           reshtml += 
-          `<div class="col-md-4">
-              <img class="content img-thumbnail" src="${window.location.origin}/foto/${val.foto}" width="100px">
-              <h2>${val.judul_lowongan}</h2>
-              <p>Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
-              <p><a class="btn btn-secondary" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
+          `<div class="col-md-4 item-lowongan">
+              <img class="content img-thumbnail mx-auto d-block" src="${window.location.origin}/foto/${val.foto}" width="100px">
+              <h2 class="text-center">${val.judul_lowongan}</h2>
+              <p class="text-center">Deskripsi Pekerjaan Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eum velit tempore maxime? Quia nisi, suscipit vitae amet aliquid saepe!</p>
+              <p><a class="btn btn-secondary col-md-12" href="admin/detail/${val.id_lowongan}">View details &raquo;</a></p>
             </div>`
         })
 

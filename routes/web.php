@@ -42,6 +42,8 @@ Route::get('/event/search' , [HomeController::class , 'searchevent']);
 
 Route::get('/stream/past/event/{id_event}' , [HomeController::class , 'streamevent']);
 
+Route::get('/lowonganarsip/search' , [HomeController::class , 'searchlowonganarsip']);
+
 Auth::routes();
 
 Route::get('/home',[LowonganController::class,'index'])->name('home');
@@ -83,6 +85,12 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/printevent',[LowonganController::class,'cetakformevent'])->name('printevent');
     Route::get('/printpertanggal/{tglawal}/{tglakhir}',[LowonganController::class,'cetakpertanggal'])->name('printpertanggal');
     Route::get('/printpertanggalevent/{waktuawal}/{waktuakhir}',[LowonganController::class,'cetakpertanggalevent'])->name('printpertanggalevent');
+
+    Route::get('/admin/search' , [LowonganController::class , 'search'])->name('admin.search');
+    Route::get('/admin/upload/event/{id}' , [LowonganController::class , 'upload']);
+    Route::post('/admin/upload/video/event/{id}' , [LowonganController::class , 'uploadvideo']);
+    
+
 });
 Auth::routes();
 

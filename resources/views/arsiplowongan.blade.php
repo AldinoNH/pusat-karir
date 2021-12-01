@@ -33,178 +33,86 @@
       body {
           margin-top: 10%;
       }
+
+      .top {
+        position: relative;
+      }
+
+      @media (max-width: 500px) {
+
+        .top{
+          position: relative;
+          top: 60px;
+        }
+
+      }
+
     </style>
 
 
   </head>
 <body>
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="https://stiki-indonesia.ac.id/">
-      <img src="gambar/logofooter.png" width="100" height="32" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      @include('nav')
-     
-    </div>
-    <div class="col-4 float-right">
-      <form class="form-inline my-2 my-lg-0" action=" " method="GET">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" value="cari">Search</button>
-      </form>
-    </div>
-  </nav>
-</header>
-    <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <div class="accrodion" id="accrodionArsip">
-
-      {{-- Approve Lowongan --}}
-
-      <div class="accordion-item">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Lowongan Approval
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accrodionArsip">
-            <div class="card-body">
-              
-               <!-- START THE FEATURETTES -->
-                  @foreach( $lowongan as $data )
-                  <hr class="featurette-divider">
-
-                  <div class="d-flex justify-content-between featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
-                    </div>
-                    
-                    <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
-                    </div>
-                  </div>
-                  @endforeach
-
-                <!-- /END THE FEATURETTES -->
-
-            </div>
-          </div>
-        </div>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="https://stiki-indonesia.ac.id/">
+        <img src="gambar/logofooter.png" width="100" height="32" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        @include('nav')
       </div>
-
-      {{-- Arsip Lowongan --}}
-
-      <div class="accordion-item">
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lowongan Terarsip
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accrodionArsip">
-            <div class="card-body">
-              
-               <!-- START THE FEATURETTES -->
-                  @foreach( $arsip as $data )
-                  <hr class="featurette-divider">
-
-                  <div class="d-flex justify-content-between featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                      <p class="lead">{{ $data->kualifikasi }}</p>
-                      <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->tgl_akhir)->locale('id')->isoFormat('LL') }}</span>
-                      <br />
-                      <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
-                    </div>
-                    
-                    <div class="col-md-2">
-                      <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
-                    </div>
-                  </div>
-                  @endforeach
-
-                <!-- /END THE FEATURETTES -->
-
-            </div>
-          </div>
-        </div>
+      <div class="col-md-4 float-right">
+        <form class="form-inline my-2 my-lg-0" method="GET">
+          <input class="form-control col mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchlowongan">
+        </form>
       </div>
-        
-    </div>
+   </nav>
+  </header>
 
-
-    {{-- Arsip Not Aprrove --}}
-
-    <div class="accordion-item">
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-              Lowongan Tidak di Approved
-            </button>
-          </h2>
-        </div>
+  <div class="container py-4 top">
     
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accrodionArsip">
-          <div class="card-body">
-            
-             <!-- START THE FEATURETTES -->
-                @foreach( $notapproved as $data )
-                <hr class="featurette-divider">
+    <h2>Lowongan Terarsip</h2>
 
-                <div class="d-flex justify-content-between featurette">
-                  <div class="col-md-7">
-                    <h2 class="featurette-heading">{{ $data->judul_lowongan }} <span class="text-muted"></span></h2>
-                    <p class="lead">{{ $data->kualifikasi }}</p>
-                    <span class="badge badge-danger my-3">Sudah Selesai Pada {{ Carbon\Carbon::parse($data->tgl_akhir)->locale('id')->isoFormat('LL') }}</span>
-                    <br />
-                    <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
-                  </div>
-                  
-                  <div class="col-md-2">
-                    <img src="{{ url('foto/'.$data->foto) }}" style="max-height: 150px" class="img-thumbnail">
-                  </div>
+    <div id="resultQuery">
+      
+    </div>
+  
+    <div id="firstQuery">
+      <div class="row mx-auto">
+        @forelse( $arsip as $data )
+          <div class="row col-md-4 py-3">
+            <div class="col-12 mb-4">
+              <div class="card">
+                <img src="{{ url('foto/'.$data->foto) }}" class="img-thumbnail"  >
+                <div class="card-body">
+                  <h5 class="card-title">{{ $data->judul_lowongan }}</h5>
+                  <p class="card-text">{{ $data->deskripsi }}</p>
+                  <a href="admin/detailevent/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
                 </div>
-                @endforeach
-
-              <!-- /END THE FEATURETTES -->
-
+              </div>
+            </div>
           </div>
-        </div>
+          @empty
+          <div class="m-auto">Tidak Ada Event !</div>
+          @endforelse
       </div>
     </div>
-      
-  </div>
-
-</div><!-- /.container -->
-
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      @include('footer')
+  
+    <div class="row">
+      <div class="col-12">
+        @include('footer')
+      </div>
+    </div>        
+    
     </div>
-  </div>
-</div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <script src="{{ url('js/searchlowongan.js') }}"></script>
 
 </body>
 </html>

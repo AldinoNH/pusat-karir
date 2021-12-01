@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /vendor/
 node_modules/
 npm-debug.log
@@ -23,10 +21,7 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-=======
-=======
->>>>>>> 7494b0e502472144d43db09a2db5dc34778cf81f
-/node_modules
+
 /public/hot
 /public/storage
 /storage/*.key
@@ -41,7 +36,3 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-<<<<<<< HEAD
->>>>>>> c710426 (first commit)
-=======
->>>>>>> 7494b0e502472144d43db09a2db5dc34778cf81f

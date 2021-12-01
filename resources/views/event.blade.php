@@ -31,11 +31,22 @@
           margin-top: 5%;
           
       }
+
+      .top {
+        position: relative;
+        top: 66px;
+      }
+
+      @media (max-width: 500px) {
+
+        .top {
+          top: 100px;
+        }
+
+      }
+
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
   </head>
 <body>
 <header>
@@ -50,15 +61,15 @@
       @include('nav')
      
     </div>
-    <div class="col-4 float-right">
+    <div class="col-md-4 float-right">
       <form class="form-inline my-2 my-lg-0" action=" " method="GET">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchevenet-1">
+        <input class="form-control col mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchevenet-1">
       </form>
     </div>
   </nav>
 </header>
  
-<div class="container d-flex flex-column justify-content-between" style="position: relative; top: 66px">
+<div class="container d-flex flex-column justify-content-between top">
 
   <div id="resultQuery">
 

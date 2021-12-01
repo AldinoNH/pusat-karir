@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 use App\Models\AdminModel;
+use Carbon\Carbon;
 use Dompdf\Dompdf;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class LowonganController extends Controller
 {
@@ -62,7 +67,7 @@ class LowonganController extends Controller
     public function admineventarsip()
     {
         $data = [
-            'tbl_event' => $this->AdminModel->allDataevent(),
+            'tbl_event' => $this->AdminModel->allDataevebtarsip(),
         ];
         return view('admineventarsip', $data);
     }
@@ -766,6 +771,94 @@ class LowonganController extends Controller
         //dd(["tanggal Awal : ".$tglawal, "Tanggal Akhir : ".$tglakhir]);
         $tbl_event = $this->AdminModel->allDataevent()->whereBetween('waktu', [$waktuawal, $waktuakhir]);
         return view('cetakpertanggalevent', compact('tbl_event'));
+    }
+
+    public function search(Request $request) {
+
+        if( $request->has('search') && $request->search !== null ) {
+
+            $searchval = '%' . $request->search . '%';
+    
+            $lowongan = DB::table('lowongan')
+                ->where(function($q) use ($searchval){
+                    $q->orWhere('judul_lowongan' , 'like' , $searchval)
+                    ->orWhere('deskripsi' , 'like' , $searchval)
+                    ->orWhere('name' , 'like' , $searchval);
+                })->get();
+            
+            $event = DB::table('tbl_event')->where(function($q) use ($searchval) {
+                $q->orWhere('nama_event' , 'like' , $searchval)
+                ->orWhere('deskripsi' , 'like' , $searchval);
+            })->get();
+
+            $berita = DB::table('tbl_berita')->where(function($q) use ($searchval){
+                $q->orWhere('deskripsi' , 'like' , $searchval)
+                ->orWhere('nama_berita' , 'like' , $searchval);
+            })->get();
+
+            return view('adminsearchresult' , [
+                'lowongan' => $lowongan,
+                'event'    => $event,
+                'berita'   => $berita,
+            ]);
+        }
+
+        return redirect()->back();
+
+
+    }
+
+    public function upload($id) {
+
+        $tbl_event = DB::table('tbl_event')->where('id_event' , $id)->first();
+
+        return view('adminuploadvideoevent' , [ 'tbl_event' => $tbl_event ]);
+
+    }
+
+    public function uploadvideo( Request $request , $id ){
+
+        $validation = Validator::make($request->all() , [
+            'upload' => 'required|mimes:mp4,mpeg,avi'
+        ] , [
+            'upload.required' => 'Video harus ada !',
+            'upload.mimes' => 'Extensi video tidak support, hanya support (mp4 , avi, mpeg)'
+        ]);
+
+        if( $validation->fails() ) {
+            return redirect()->back()->withErrors($validation);
+        }
+
+        DB::beginTransaction();
+
+        $video = $request->file('upload');
+
+        $filename = $video->hashName();
+
+        try {
+            
+            $path = $video->storeAs('video_event' , $filename , 'public');
+
+            DB::table('tbl_event')->where('id_event' , $id)->update([
+                'upload' => "/storage/$path",
+            ]);
+
+            DB::commit();
+
+            return redirect()->back()->with('pesan', 'Video berhasil di upload !');
+
+        }catch(Exception $e){
+
+            DB::rollBack();
+
+            Storage::disk('public')->delete('video_event/' . $filename );
+
+        }
+
+        return redirect()->back()->with('error', 'Gagal mengupload video!');
+
+        
+
     }
 
 }

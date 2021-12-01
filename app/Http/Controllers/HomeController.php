@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\AdminModel;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -218,9 +219,25 @@ class HomeController extends Controller
 
         $data = DB::table('tbl_event')->where('id_Event' , $id)->first();
         
-        $stream = new \App\Helper\VideoStream( \public_path("/video_event/$data->upload") );
+        $stream = new \App\Helper\VideoStream( public_path($data->upload) );
 
         $stream->start();
+
+    }
+
+    public function searchlowonganarsip(Request $request) {
+
+        $searchval = '%'.  $request->search . '%';
+
+        $data = DB::table('lowongan')
+            ->where('tgl_akhir' , '<' , Carbon::now()->format('Y-m-d'))
+                ->where(function ($q) use ($searchval) {
+    
+                    $q->orWhere('judul_lowongan' , 'like' , $searchval)->orWhere('name' , 'like' , $searchval)->orWhere('deskripsi' , 'like' , $searchval);
+    
+            })->get();
+
+        return response()->json($data);
 
     }
 
