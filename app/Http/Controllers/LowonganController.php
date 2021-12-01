@@ -35,7 +35,7 @@ class LowonganController extends Controller
     {
 
         $data = [
-            'lowongan' => $this->AdminModel->allDataadmin(),
+            'lowongan' => $this->AdminModel->allDatalowongankerjaarsip(),
         ];
         return view('adminarsiplowongan', $data);
     }

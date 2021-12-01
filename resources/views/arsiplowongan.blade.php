@@ -89,7 +89,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $data->judul_lowongan }}</h5>
                   <p class="card-text">{{ $data->deskripsi }}</p>
-                  <a href="admin/detailevent/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
+                  <a href="admin/detail/{{ $data->id_lowongan }}" class="btn btn-secondary">View details</a>
                 </div>
               </div>
             </div>
